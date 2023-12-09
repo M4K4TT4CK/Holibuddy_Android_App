@@ -76,4 +76,4 @@ The app is compatible with Android 8.0 and higher, ensuring a wide range of devi
 >VERSION: 31
 ## URL TO REPOSITORY
 URL
->https://gitlab.com/wgu-gitlab-environment/student-repos/mmcm108/d308-mobile-application-development-android/-/tree/current_branch
+>https://gitlab.com/wgu-gitlab-environment/student-repos/mmcm108/d424-software-engineering-capstone/-/tree/working_branch?ref_type=heads
