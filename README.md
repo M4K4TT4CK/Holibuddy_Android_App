@@ -1,4 +1,4 @@
-# D308 Mobile Application Development Android
+# HoliBuddy Vacation Builder App
 ## Purpose
 The purpose of the vacation scheduler application is to provide a comprehensive and
 user-friendly tool for travelers to efficiently plan and manage their vacations and 
