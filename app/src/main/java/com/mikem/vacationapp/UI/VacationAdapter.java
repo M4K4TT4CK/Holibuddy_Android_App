@@ -15,6 +15,8 @@ import com.mikem.vacationapp.entities.Vacation;
 
 import java.util.List;
 
+// Task B - code that implements inheritance
+// RecyclerView in the parent class and VacationAdapter is the child class
 public class VacationAdapter extends RecyclerView.Adapter<VacationAdapter.VacationViewHolder> {
 
     public List<Vacation> mVacations;

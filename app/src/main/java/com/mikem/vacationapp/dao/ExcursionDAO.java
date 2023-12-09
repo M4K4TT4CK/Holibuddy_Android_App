@@ -11,6 +11,8 @@ import com.mikem.vacationapp.entities.Excursion;
 
 import java.util.List;
 
+// Task B - code that includes encapsulation
+
 @Dao
 public interface ExcursionDAO {
 

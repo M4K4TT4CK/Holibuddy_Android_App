@@ -191,7 +191,7 @@ public class ExcursionDetails extends AppCompatActivity {
 
     ////  Include validation that the input dates are formatted correctly
     public boolean dateCheckExcursion(){
-
+        // Task B - industry standards on security -- try/catch
         Date excursionStartDate = new Date();
         try{
             excursionStartDate = new SimpleDateFormat("MM/dd/yy", Locale.US).parse(date);

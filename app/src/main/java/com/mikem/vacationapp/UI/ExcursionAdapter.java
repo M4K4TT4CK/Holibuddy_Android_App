@@ -15,6 +15,9 @@ import com.mikem.vacationapp.entities.Excursion;
 
 import java.util.List;
 
+
+// Task B - code that implements inheritance
+// RecyclerView is the parent class and ExcursionAdapter is the child class
 public class ExcursionAdapter extends RecyclerView.Adapter<ExcursionAdapter.ExcursionViewHolder> {
 
     private final LayoutInflater mInflater;
@@ -27,7 +30,7 @@ public class ExcursionAdapter extends RecyclerView.Adapter<ExcursionAdapter.Excu
         mInflater = LayoutInflater.from(context);
         this.context = context;
     }
-
+    // inheritance from RecycleView
     class ExcursionViewHolder extends RecyclerView.ViewHolder{
         private final TextView excursionListItem;
 

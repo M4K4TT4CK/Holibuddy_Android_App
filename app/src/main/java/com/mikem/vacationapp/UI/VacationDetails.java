@@ -164,7 +164,7 @@ import java.util.Locale;
 
         // Include validation that the input dates are formatted correctly.
         private boolean dateCheck() {
-
+            // Task B - industry standards on security -- try/catch
             Date startDateVac = new Date();
             try {
                 startDateVac = new SimpleDateFormat("MM/dd/yy", Locale.US).parse(start_date);
