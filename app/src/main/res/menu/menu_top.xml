@@ -10,12 +10,12 @@
 
 <!--        />-->
 
-<!--    <item android:id="@+id/Search"-->
-<!--        android:title="Search"-->
-<!--        android:icon="@android:drawable/ic_menu_search"-->
-<!--        android:contentDescription="Search"-->
+    <item android:id="@+id/Search"
+        android:title="Search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:contentDescription="Search"
 
-<!--        />-->
+        />
 
 <!--    <item android:id="@+id/Notify"-->
 <!--        android:title="Notify"-->
