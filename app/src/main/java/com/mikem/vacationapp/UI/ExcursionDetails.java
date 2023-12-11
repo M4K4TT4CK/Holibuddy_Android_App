@@ -26,10 +26,11 @@ import java.util.Objects;
 
 import com.mikem.vacationapp.database.Repository;
 import com.mikem.vacationapp.entities.Vacation;
+import com.mikem.vacationapp.util.DateValidator;
 
 
 public class ExcursionDetails extends AppCompatActivity {
-
+    DateValidator dateValidator = new DateValidator();
     Repository mRepository;
 
     int excursionId;
@@ -119,7 +120,7 @@ public class ExcursionDetails extends AppCompatActivity {
             date = excursionDateText.getText().toString();
 
             //  Include validation that the excursion date is during the associated vacation
-            if (dateCheckExcursion() && dateValidation(date)) {
+            if (dateValidator.dateCheck(vacationStartDate, date) && dateValidator.dateCheck(date, vacationEndDate)) {
 
                 if (excursionId == -1) {
                     String title = excursionTitleText.getText().toString();
