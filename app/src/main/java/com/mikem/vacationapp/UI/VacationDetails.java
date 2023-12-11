@@ -20,6 +20,7 @@ import com.mikem.vacationapp.R;
 import com.mikem.vacationapp.database.Repository;
 import com.mikem.vacationapp.entities.Excursion;
 import com.mikem.vacationapp.entities.Vacation;
+import com.mikem.vacationapp.util.DateValidator;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -33,7 +34,7 @@ import java.util.Locale;
 // display detailed view of the vacation
 
     public class VacationDetails extends AppCompatActivity {
-
+        private DateValidator dateValidator = new DateValidator();
         private Repository repository;
         int vacationId;
         String title;
@@ -163,25 +164,25 @@ import java.util.Locale;
         }
 
         // Include validation that the input dates are formatted correctly.
-        private boolean dateCheck() {
-            // Task B - industry standards on security -- try/catch
-            Date startDateVac = new Date();
-            try {
-                startDateVac = new SimpleDateFormat("MM/dd/yy", Locale.US).parse(start_date);
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
-
-            Date endDateVac = new Date();
-            try {
-                endDateVac = new SimpleDateFormat("MM/dd/yy", Locale.US).parse(end_date);
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
-
-            assert startDateVac != null;
-            return startDateVac.before(endDateVac);
-        }
+//        private boolean dateCheck() {
+//            // Task B - industry standards on security -- try/catch
+//            Date startDateVac = new Date();
+//            try {
+//                startDateVac = new SimpleDateFormat("MM/dd/yy", Locale.US).parse(start_date);
+//            } catch (ParseException e) {
+//                e.printStackTrace();
+//            }
+//
+//            Date endDateVac = new Date();
+//            try {
+//                endDateVac = new SimpleDateFormat("MM/dd/yy", Locale.US).parse(end_date);
+//            } catch (ParseException e) {
+//                e.printStackTrace();
+//            }
+//
+//            assert startDateVac != null;
+//            return startDateVac.before(endDateVac);
+//        }
 
         // Include validation that the vacation end date is after the start date
 
@@ -236,7 +237,7 @@ import java.util.Locale;
                 start_date = vacationStartText.getText().toString();
                 end_date = vacationEndText.getText().toString();
 
-                if (dateCheck() && dateValidationStart(start_date) && dateValidationEnd(end_date)) {
+                if (dateValidator.dateCheck(start_date, end_date) && dateValidator.dateValidationStart(start_date) && dateValidator.dateValidationEnd(end_date)) {
 
                     String title = vacationTitleText.getText().toString();
                     String lodging = vacationLodgingText.getText().toString();
