@@ -31,8 +31,8 @@
                     android:layout_height="wrap_content"
                     android:background="#e6e1f9"
                     android:backgroundTint="#e6e1f9"
-                    android:contentDescription="Excursion Title"
-                    android:text="Excursion Title"
+                    android:contentDescription="Adventure"
+                    android:text="Adventure"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -52,9 +52,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="Excursion Date"
+                    android:contentDescription="AdventureDate"
                     android:padding="4sp"
-                    android:text="Excursion Date"
+                    android:text="Adventure Date"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 

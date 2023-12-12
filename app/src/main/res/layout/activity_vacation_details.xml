@@ -34,7 +34,7 @@
             android:layout_height="35dp"
             android:padding="4sp"
             android:paddingLeft="6sp"
-            android:text="Vacation Title"
+            android:text="Vacation"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -50,10 +50,10 @@
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="wrap_content"
             android:padding="4sp"
             android:paddingLeft="6sp"
-            android:text="Vacation Lodging"
+            android:text="Lodging"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -110,7 +110,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="6sp"
-            android:text="- Excursions"
+            android:text="Adventures"
+            android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="bold" />
 

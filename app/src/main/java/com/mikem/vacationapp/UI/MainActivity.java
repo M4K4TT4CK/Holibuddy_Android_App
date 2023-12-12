@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 
 import android.view.Menu;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import com.mikem.vacationapp.R;
 
@@ -20,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //No title bar
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
