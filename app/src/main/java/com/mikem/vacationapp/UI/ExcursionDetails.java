@@ -37,6 +37,7 @@ public class ExcursionDetails extends AppCompatActivity {
     int vacationId;
     String title;
     String date;
+    String create_date;
 
     String vacationStartDate;
     String vacationEndDate;
@@ -124,7 +125,7 @@ public class ExcursionDetails extends AppCompatActivity {
 
                 if (excursionId == -1) {
                     String title = excursionTitleText.getText().toString();
-                    Excursion newExcursion = new Excursion(0, vacationId, title, date);
+                    Excursion newExcursion = new Excursion(0, vacationId, title, date, create_date);
                     mRepository.insert(newExcursion);
                     Toast.makeText(ExcursionDetails.this, "Excursion Added!", Toast.LENGTH_LONG).show();
                     this.finish();
@@ -132,7 +133,7 @@ public class ExcursionDetails extends AppCompatActivity {
                 } else if (excursionId >= 0) {
                     String title = excursionTitleText.getText().toString();
                     String date = excursionDateText.getText().toString();
-                    Excursion newExcursion = new Excursion(excursionId, vacationId, title, date);
+                    Excursion newExcursion = new Excursion(excursionId, vacationId, title, date, create_date);
                     mRepository.update(newExcursion);
                     Toast.makeText(ExcursionDetails.this, "Excursion Updated!", Toast.LENGTH_LONG).show();
                     this.finish();

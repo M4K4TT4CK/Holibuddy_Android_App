@@ -41,6 +41,7 @@ import java.util.Locale;
         String lodging;
         String start_date;
         String end_date;
+        String create_date;
 
         Vacation currentVac;
         int numExc;
@@ -242,13 +243,13 @@ import java.util.Locale;
                     String title = vacationTitleText.getText().toString();
                     String lodging = vacationLodgingText.getText().toString();
                     if (vacationId == -1) {
-                        Vacation newVacation = new Vacation(0, title, lodging, start_date, end_date);
+                        Vacation newVacation = new Vacation(0, title, lodging, start_date, end_date, create_date);
                         repository.insert(newVacation);
 
                     } else {
                         String start = vacationStartText.getText().toString();
                         String end = vacationEndText.getText().toString();
-                        Vacation newVacation = new Vacation(vacationId, title, lodging, start, end);
+                        Vacation newVacation = new Vacation(vacationId, title, lodging, start, end, create_date);
                         repository.update(newVacation);
                     }
                     Toast.makeText(VacationDetails.this, "Vacation added successfully!", Toast.LENGTH_LONG).show();

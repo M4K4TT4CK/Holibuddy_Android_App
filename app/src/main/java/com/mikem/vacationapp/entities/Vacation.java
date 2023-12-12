@@ -6,6 +6,10 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 @Entity(tableName = "vacations")
 public class Vacation {
     // include the following  details for each vacation
@@ -17,15 +21,19 @@ public class Vacation {
     private String vacationStartDate;
     private String vacationEndDate;
 
-    @Ignore
-    public Vacation(){}
+    private String creationTimeStamp;
 
-    public Vacation(int vacationID, String vacationTitle, String vacationLodging, String vacationStartDate, String vacationEndDate) {
+    @Ignore
+    public Vacation(){
+    }
+
+    public Vacation(int vacationID, String vacationTitle, String vacationLodging, String vacationStartDate, String vacationEndDate, String creationTimeStamp) {
         this.vacationID = vacationID;
         this.vacationTitle = vacationTitle;
         this.vacationLodging = vacationLodging;
         this.vacationStartDate = vacationStartDate;
         this.vacationEndDate = vacationEndDate;
+        this.creationTimeStamp = getCurrentTimestamp();
     }
 
     public int getVacationID() {
@@ -66,6 +74,15 @@ public class Vacation {
 
     public void setVacationEndDate(String vacationEndDate) {
         this.vacationEndDate = vacationEndDate;
+    }
+
+    private String getCurrentTimestamp() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+        return sdf.format(new Date());
+    }
+
+    public String getCreationTimeStamp() {
+        return creationTimeStamp;
     }
 }
 

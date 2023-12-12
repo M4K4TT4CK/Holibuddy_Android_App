@@ -5,7 +5,9 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 @Entity(tableName = "excursions")
 public class Excursion {
@@ -16,15 +18,20 @@ public class Excursion {
     private int vacationID;
     private String excursionTitle;
     private String excursionDate;
+    private String creationTimeStamp;
 
     @Ignore
-    public Excursion(){}
+    public Excursion(){
 
-    public Excursion(int excursionID, int vacationID, String excursionTitle, String excursionDate) {
+    }
+
+    public Excursion(int excursionID, int vacationID, String excursionTitle, String excursionDate, String creationTimeStamp) {
         this.excursionID = excursionID;
         this.vacationID = vacationID;
         this.excursionTitle = excursionTitle;
         this.excursionDate = excursionDate;
+        this.creationTimeStamp = getCurrentTimestamp();
+
     }
 
     public int getExcursionID() {
@@ -59,6 +66,12 @@ public class Excursion {
         this.excursionDate = excursionDate;
     }
 
+    private String getCurrentTimestamp() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+        return sdf.format(new Date());
+    }
+
+
     @NonNull
     @Override
     public String toString() {
@@ -68,5 +81,9 @@ public class Excursion {
                 ", excursionTitle='" + excursionTitle + '\'' +
                 ", excursionDate='" + excursionDate + '\'' +
                 '}';
+    }
+
+    public String getCreationTimeStamp() {
+        return creationTimeStamp;
     }
 }

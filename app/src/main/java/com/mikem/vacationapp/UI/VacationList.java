@@ -58,13 +58,13 @@ public class VacationList extends AppCompatActivity {
         if (item.getItemId()==R.id.sample){
             //Toast.makeText(VacationList.this, "put in sample data", Toast.LENGTH_LONG).show();
             mRepository=new Repository(getApplication());
-            Vacation vacation =new Vacation(0, "Disney", "All_Star_Sports", "11/14/2023", "11/22/2023");
+            Vacation vacation =new Vacation(0, "Disney", "All_Star_Sports", "11/14/2023", "11/22/2023", "2023-11-31 12:00:00");
             mRepository.insert(vacation);
-            vacation=new Vacation(0, "Destin", "Hotel", "12/01/2023", "12/10/2023");
+            vacation=new Vacation(0, "Destin", "Hotel", "12/01/2023", "12/10/2023", "2023-11-31 12:00:00");
             mRepository.insert(vacation);
-            Excursion excursion=new Excursion(0, 1, "Car Drive", "12/02/2023");
+            Excursion excursion=new Excursion(0, 1, "Car Drive", "12/02/2023", "2023-11-31 12:00:00");
             mRepository.insert(excursion);
-            excursion=new Excursion(0, 1, "Bike Ride", "12/03/2023");
+            excursion=new Excursion(0, 1, "Bike Ride", "12/03/2023", "2023-11-31 12:00:00");
             mRepository.insert(excursion);
             return true;
         }
