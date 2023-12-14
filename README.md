@@ -24,54 +24,54 @@ any traveler seeking an efficient and streamlined way to plan and enjoy their va
 ## TASK C - USER APPLICATION INSTRUCTIONS
 The HoliBuddy App is designed to be user-friendly and intuitive. Here are the instructions on how to operate the application to utilize all its features effectively:
 
-1. Home Screen:
-    >- Upon launching the app, you will be greeted with the Home Screen. This screen serves as your navigation hub to access different features of the app.
+## 1. Home Screen:
+    >-Upon launching the app, you will be greeted with the Home Screen. This screen serves as your navigation hub to access different features of the app.
     >- From here, you can navigate to view your vacation list which allows you to also navigate to excursion list, or add new vacations and excursions.
 
-2. Adding a Vacation:
+## 2. Adding a Vacation:
     >- To add a new vacation, navigate to the 'Floating Add button' section from the Vacation List screen.
     >- Fill in the details such as vacation title, lodging place, start date, and end date.
     >- Ensure the dates are entered in the correct format and that the end date is after the start date.
     >- Once all details are filled in, save the vacation. It will now appear in your vacation list.
 
-3. Viewing and Editing Vacations:
+## 3. Viewing and Editing Vacations:
     >- Access your list of vacations from the Home Screen.
     >- Select a vacation to view its details. Here, you can also edit the information or delete the vacation.
     >- Remember, a vacation cannot be deleted if there are excursions associated with it.
 
-4. Searching through Vacations
+## 4. Searching through Vacations
     >- Use the SearchView finder.
     >- Type in the vacation you're looking for. 
     >- Select Item you are searching for.
 
-5. Setting Alerts for Vacations:
+## 5. Setting Alerts for Vacations:
     >- While adding or editing a vacation, you can set alerts for the start and end dates.
     >- These alerts will notify you when the vacation is about to start or end.
 
-6. Sharing Vacation Details (Generating Reports):
+## 6. Sharing Vacation Details (Generating Reports):
     >- In the detailed view of a vacation, use the sharing feature to share details via email, clipboard, or SMS.
     >- The sharing feature automatically populates with the vacation details for easy sharing.
 
-7. Adding Adventures:
+## 7. Adding Adventures:
     >- Navigate to the ‘Floating Add button’ section from within a vacation's detailed view.
     >- Enter details like the excursion title and date, ensuring the date falls within the vacation's start and end dates.
     >- Save the excursion, and it will be listed under the associated vacation.
 
-8. Viewing and Editing Excursions:
+## 8. Viewing and Editing Excursions:
     >- Access the list of excursions from a vacation's detailed view.
     >- Select an excursion to view its details, where you can also edit or delete the information.
 
-9. Setting Alerts for Excursions:
+## 9. Setting Alerts for Excursions:
     >- While adding or editing an excursion, you can set an alert for the excursion date.
     >- This alert will notify you about the excursion on the specified date.
 
-10. Generating APK:
+## 10. Generating APK:
     >- For developers or testers, generate a signed APK from Android Studio to test the application on different devices.
 
-11. Navigating the App:
+## 11. Navigating the App:
     >- Use the navigation bar or back button to move between different screens and functionalities.
 
-12. Exit or Close the App:
+## 12. Exit or Close the App:
     >- You can exit the application normally through your device's home or back button.
 
 Remember to regularly update the application and check for new features or enhancements. 
