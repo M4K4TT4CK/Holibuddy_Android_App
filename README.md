@@ -25,7 +25,7 @@ any traveler seeking an efficient and streamlined way to plan and enjoy their va
 The HoliBuddy App is designed to be user-friendly and intuitive. Here are the instructions on how to operate the application to utilize all its features effectively:
 
 ## 1. Home Screen:
-    >-Upon launching the app, you will be greeted with the Home Screen. This screen serves as your navigation hub to access different features of the app.
+    >- Upon launching the app, you will be greeted with the Home Screen. This screen serves as your navigation hub to access different features of the app.
     >- From here, you can navigate to view your vacation list which allows you to also navigate to excursion list, or add new vacations and excursions.
 
 ## 2. Adding a Vacation:
