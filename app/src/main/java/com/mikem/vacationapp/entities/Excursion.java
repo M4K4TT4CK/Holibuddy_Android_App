@@ -5,21 +5,16 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-
 @Entity(tableName = "excursions")
-public class Excursion {
+public class Excursion extends BaseEntity {
 
-    // Include the following details for each excursion
     @PrimaryKey(autoGenerate = true)
     private int excursionID;
     private int vacationID;
     private String excursionTitle;
     private String excursionDate;
-    private String creationTimeStamp;
 
+    private String creationTimeStamp;
     @Ignore
     public Excursion(){
 
@@ -30,8 +25,22 @@ public class Excursion {
         this.vacationID = vacationID;
         this.excursionTitle = excursionTitle;
         this.excursionDate = excursionDate;
-        this.creationTimeStamp = getCurrentTimestamp();
+        this.creationTimeStamp = BaseEntity.getCurrentTimestamp(); // Set the timestamp when an Excursion is created
 
+    }
+
+    // Getters and Setters
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "Excursion{" +
+                "excursionID=" + excursionID +
+                ", vacationID=" + vacationID +
+                ", excursionTitle='" + excursionTitle + '\'' +
+                ", excursionDate='" + excursionDate + '\'' +
+                ", Created on: " + creationTimeStamp +
+                '}';
     }
 
     public int getExcursionID() {
@@ -64,26 +73,5 @@ public class Excursion {
 
     public void setExcursionDate(String excursionDate) {
         this.excursionDate = excursionDate;
-    }
-
-    private String getCurrentTimestamp() {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
-        return sdf.format(new Date());
-    }
-
-
-    @NonNull
-    @Override
-    public String toString() {
-        return "Excursion{" +
-                "excursionID=" + excursionID +
-                ", vacationID=" + vacationID +
-                ", excursionTitle='" + excursionTitle + '\'' +
-                ", excursionDate='" + excursionDate + '\'' +
-                '}';
-    }
-
-    public String getCreationTimeStamp() {
-        return creationTimeStamp;
     }
 }
