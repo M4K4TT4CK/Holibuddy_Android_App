@@ -99,26 +99,19 @@ public class VacationList extends AppCompatActivity {
             mRepository.insert(excursion);
             return true;
         }
-        // go to home screen
-        findViewById(R.id.home).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent;
-                try {
-                    intent = new Intent(VacationList.class.newInstance(), MainActivity.class);
-                } catch (IllegalAccessException | InstantiationException e) {
-                    throw new RuntimeException(e);
-                }
-                startActivity(intent);
-            }
-        });
-        // item select for refresh vacations
-        if (id == R.id.refresh2) {
+        else if (id == R.id.refresh2) {
             refreshVacationList();
             return true;
         }
-        return super.onOptionsItemSelected(item); // return false;
+        else if (id == android.R.id.home) {
+            // Navigate to the MainActivity
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
+
 
     private void refreshVacationList() {
         // Refresh the list of vacations
@@ -130,4 +123,5 @@ public class VacationList extends AppCompatActivity {
             searchView.clearFocus();
         }
     }
+
 }
