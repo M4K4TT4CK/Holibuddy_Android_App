@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -84,7 +85,8 @@ public class VacationList extends AppCompatActivity {
 
     // add vacations
     public boolean onOptionsItemSelected(MenuItem item){
-        if (item.getItemId()==R.id.sample){
+        int id = item.getItemId();
+        if (id==R.id.sample){
             //Toast.makeText(VacationList.this, "put in sample data", Toast.LENGTH_LONG).show();
             mRepository=new Repository(getApplication());
             Vacation vacation =new Vacation(0, "Disney", "All_Star_Sports", "11/14/2023", "11/22/2023", "2023-11-31 12:00:00");
@@ -97,10 +99,35 @@ public class VacationList extends AppCompatActivity {
             mRepository.insert(excursion);
             return true;
         }
-        if(item.getItemId()==android.R.id.home){
-            this.finish();
+        // go to home screen
+        findViewById(R.id.home).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent;
+                try {
+                    intent = new Intent(VacationList.class.newInstance(), MainActivity.class);
+                } catch (IllegalAccessException | InstantiationException e) {
+                    throw new RuntimeException(e);
+                }
+                startActivity(intent);
+            }
+        });
+        // item select for refresh vacations
+        if (id == R.id.refresh2) {
+            refreshVacationList();
             return true;
         }
-        return false;
+        return super.onOptionsItemSelected(item); // return false;
+    }
+
+    private void refreshVacationList() {
+        // Refresh the list of vacations
+        vacationList = mRepository.getmAllVacations();
+        vacationAdapter.setVacations(vacationList);
+        // Reset the search view
+        if (searchView != null) {
+            searchView.setQuery("", false);
+            searchView.clearFocus();
+        }
     }
 }
