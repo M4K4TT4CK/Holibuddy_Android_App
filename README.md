@@ -173,7 +173,9 @@ The app is compatible with Android 8.0 and higher, ensuring a wide range of devi
 ### 3. Update Release Notes:
     - Prepare release notes for the new version, detailing new features, bug fixes, and any other 
       relevant information.
-
+## Version Number
+Use link to view current version number
+>https://gitlab.com/wgu-gitlab-environment/student-repos/mmcm108/d424-software-engineering-capstone/-/blob/working_branch/build.gradle.kts
 
 ## SIGNED APK VERSION
 >VERSION: 31
