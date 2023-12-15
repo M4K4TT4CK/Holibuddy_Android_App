@@ -1,4 +1,4 @@
-package com.mikem.vacationapp.UI;
+package com.mikem.vacationapp.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.mikem.vacationapp.R;
+import com.mikem.vacationapp.UI.VacationDetails;
 import com.mikem.vacationapp.entities.Vacation;
 import java.util.List;
 

@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.mikem.vacationapp.R;
+import com.mikem.vacationapp.adapters.ExcursionAdapter;
 import com.mikem.vacationapp.database.Repository;
 import com.mikem.vacationapp.entities.Excursion;
 import com.mikem.vacationapp.entities.Vacation;

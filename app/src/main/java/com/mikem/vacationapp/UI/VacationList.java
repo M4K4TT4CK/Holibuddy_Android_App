@@ -8,12 +8,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.mikem.vacationapp.R;
+import com.mikem.vacationapp.adapters.VacationAdapter;
 import com.mikem.vacationapp.database.Repository;
 import com.mikem.vacationapp.entities.Excursion;
 import com.mikem.vacationapp.entities.Vacation;
