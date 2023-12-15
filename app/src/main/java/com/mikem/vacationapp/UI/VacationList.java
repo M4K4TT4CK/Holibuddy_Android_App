@@ -111,8 +111,6 @@ public class VacationList extends AppCompatActivity {
         } else if (id == R.id.export_to_csv) {
             createFile();
             return true;
-        } else if (id==R.id.export_to_pdf){
-            return true;
         }
         return super.onOptionsItemSelected(item);
     }
