@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.Locale;
 
 @Entity(tableName = "vacations")
-public class Vacation {
+public class Vacation extends BaseEntity{
     // include the following  details for each vacation
 
     @PrimaryKey(autoGenerate = true)
@@ -33,7 +33,7 @@ public class Vacation {
         this.vacationLodging = vacationLodging;
         this.vacationStartDate = vacationStartDate;
         this.vacationEndDate = vacationEndDate;
-        this.creationTimeStamp = getCurrentTimestamp();
+        this.creationTimeStamp = BaseEntity.getCurrentTimestamp();
     }
 
     public int getVacationID() {
@@ -76,13 +76,13 @@ public class Vacation {
         this.vacationEndDate = vacationEndDate;
     }
 
-    private String getCurrentTimestamp() {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
-        return sdf.format(new Date());
-    }
+//    private String getCurrentTimestamp() {
+//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+//        return sdf.format(new Date());
+//    }
 
-    public String getCreationTimeStamp() {
-        return creationTimeStamp;
-    }
+//    public String getCreationTimeStamp() {
+//        return creationTimeStamp;
+//    }
 }
 
