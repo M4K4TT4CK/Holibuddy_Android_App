@@ -33,6 +33,10 @@
             android:exported="false"
             android:label="Vacation Details"
             android:parentActivityName=".UI.VacationList">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".UI.MainActivity" />
+
         </activity>
 
         <activity

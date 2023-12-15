@@ -103,13 +103,7 @@ public class VacationList extends AppCompatActivity {
             refreshVacationList();
             return true;
         }
-        // potential for removal. redundant
-        else if (id == android.R.id.home) {
-            // Navigate to the MainActivity
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-            return true;
-        }
+        // removed home, back button bring you to MainActivity.class
         return super.onOptionsItemSelected(item);
     }
 
