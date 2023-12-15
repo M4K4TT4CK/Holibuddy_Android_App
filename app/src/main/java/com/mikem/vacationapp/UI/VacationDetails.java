@@ -282,7 +282,7 @@ import java.util.Locale;
                     Toast.makeText(VacationDetails.this, currentVac.getVacationTitle() + " was deleted", Toast.LENGTH_LONG).show();
                     this.finish();
                 } else {
-                    Toast.makeText(VacationDetails.this, "Can't delete a vacation with associated excursions", Toast.LENGTH_LONG).show();
+                    Toast.makeText(VacationDetails.this, "Can't delete a vacation with associated adventures!", Toast.LENGTH_LONG).show();
                 }
                 return true;
             }
