@@ -25,6 +25,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class VacationList extends AppCompatActivity {
 
@@ -39,6 +40,8 @@ public class VacationList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vacation_list);
+
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Current Vacations");
 
         FloatingActionButton fab = findViewById(R.id.floatingActionButton);
         fab.setOnClickListener(v -> startActivity(new Intent(VacationList.this, VacationDetails.class)));

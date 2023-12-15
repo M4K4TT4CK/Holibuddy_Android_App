@@ -30,6 +30,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 
 
 // display detailed view of the vacation
@@ -66,6 +67,8 @@ import java.util.Locale;
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_vacation_details);
+
+            Objects.requireNonNull(getSupportActionBar()).setTitle("Details");
 
             repository = new Repository(getApplication());
             vacationTitleText = findViewById(R.id.vacation_title);

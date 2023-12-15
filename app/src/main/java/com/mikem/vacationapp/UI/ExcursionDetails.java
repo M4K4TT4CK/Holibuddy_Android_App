@@ -59,6 +59,8 @@ public class ExcursionDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_excursion_details);
 
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Adventures");
+
         mRepository = new Repository(getApplication());
         excursionTitleText = findViewById(R.id.excursion_title);
         excursionDateText = findViewById(R.id.excursion_date);
