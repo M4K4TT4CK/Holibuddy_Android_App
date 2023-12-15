@@ -8,7 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -17,35 +17,64 @@ import com.mikem.vacationapp.database.Repository;
 import com.mikem.vacationapp.entities.Excursion;
 import com.mikem.vacationapp.entities.Vacation;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class VacationList extends AppCompatActivity {
 
     private Repository mRepository;
+    private VacationAdapter vacationAdapter;
+    private SearchView searchView;
+    private List<Vacation> vacationList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vacation_list);
 
-        FloatingActionButton fab=findViewById(R.id.floatingActionButton);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(VacationList.this, VacationDetails.class);
-                startActivity(intent);
-            }
-        });
-        // recycler view
-        RecyclerView recyclerView= findViewById(R.id.vacation_recycler_view);
-        mRepository=new Repository(getApplication());
-        List<Vacation> allVacations=mRepository.getmAllVacations();
-        final VacationAdapter vacationAdapter=new VacationAdapter(this);
+        FloatingActionButton fab = findViewById(R.id.floatingActionButton);
+        fab.setOnClickListener(v -> startActivity(new Intent(VacationList.this, VacationDetails.class)));
+
+        mRepository = new Repository(getApplication());
+        vacationList = mRepository.getmAllVacations();
+
+        vacationAdapter = new VacationAdapter(this);
+        RecyclerView recyclerView = findViewById(R.id.vacation_recycler_view);
         recyclerView.setAdapter(vacationAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        vacationAdapter.setVacations(allVacations);
-        //System.out.println(getIntent().getStringExtra("test")); <- Remove after final build, no need
+        vacationAdapter.setVacations(vacationList);
+
+        searchView = findViewById(R.id.searchView);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filterList(newText);
+                return true;
+            }
+        });
     }
+
+    private void filterList(String text) {
+        List<Vacation> filteredList = new ArrayList<>();
+        for (Vacation vacation : vacationList) {
+            if (vacation.getVacationTitle().toLowerCase().contains(text.toLowerCase())) {
+                filteredList.add(vacation);
+            }
+        }
+
+        if (filteredList.isEmpty()) {
+            Toast.makeText(this, "No vacation found!", Toast.LENGTH_LONG).show();
+        } else {
+            vacationAdapter.setVacations(filteredList);
+        }
+    }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
