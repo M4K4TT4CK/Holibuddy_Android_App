@@ -54,10 +54,13 @@ operate the application to utilize all its features effectively:
     - While adding or editing a vacation, you can set alerts for the start and end dates.
     - These alerts will notify you when the vacation is about to start or end.
 
-### 6. Sharing Vacation Details (Generating Reports):
+### 6. Sharing Vacation Details:
     - In the detailed view of a vacation, use the sharing feature to share details via email, 
       clipboard, or SMS.
     - The sharing feature automatically populates with the vacation details for easy sharing.
+### 7. Generating Report:
+    - Use the 'Generate report to excell...' in the menu to export to excel
+    - After selection, appplicaiton will bring you to contioue
 
 ### 7. Adding Adventures:
     - Navigate to the ‘Floating Add button’ section from within a vacation's detailed view.
