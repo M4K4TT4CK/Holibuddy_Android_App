@@ -70,11 +70,11 @@ operate the application to utilize all its features effectively:
       start and end dates.
     - Save the excursion, and it will be listed under the associated vacation.
 
-### 8. Viewing and Editing Excursions:
+### 8. Viewing and Editing Adventures:
     - Access the list of excursions from a vacation's detailed view.
     - Select an excursion to view its details, where you can also edit or delete the information.
 
-### 9. Setting Alerts for Excursions:
+### 9. Setting Alerts for Adeventures:
     - While adding or editing an excursion, you can set an alert for the excursion date.
     - This alert will notify you about the excursion on the specified date.
 
