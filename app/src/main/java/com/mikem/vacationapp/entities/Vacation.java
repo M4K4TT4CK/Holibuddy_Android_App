@@ -75,14 +75,5 @@ public class Vacation extends BaseEntity{
     public void setVacationEndDate(String vacationEndDate) {
         this.vacationEndDate = vacationEndDate;
     }
-
-//    private String getCurrentTimestamp() {
-//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
-//        return sdf.format(new Date());
-//    }
-
-//    public String getCreationTimeStamp() {
-//        return creationTimeStamp;
-//    }
 }
 
