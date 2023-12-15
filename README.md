@@ -182,3 +182,7 @@ Use link to view current version number
 ## URL TO REPOSITORY
 URL
 >https://gitlab.com/wgu-gitlab-environment/student-repos/mmcm108/d424-software-engineering-capstone/-/tree/working_branch?ref_type=heads
+
+
+# Author
+# Mike McMillin
