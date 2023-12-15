@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class HoliBuddyUnitTest {
-
+    // Final tests for HoliBuddy App
     DateValidator dateValidator = new DateValidator();
 
     /**
