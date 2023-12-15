@@ -4,6 +4,10 @@
     <item
         android:id="@+id/refresh2"
         android:title="Refresh" />
+    <item android:title="Generate report to Excel..."
+        android:id="@+id/export_to_csv"/>
+    <item android:title="Generate report to PDF..."
+        android:id="@+id/export_to_pdf"/>
     <item android:title="Add Example Vacations!"
         android:id="@+id/sample"/>
 </menu>
