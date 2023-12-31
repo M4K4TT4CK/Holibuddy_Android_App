@@ -74,7 +74,7 @@ operate the application to utilize all its features effectively:
     - Access the list of excursions from a vacation's detailed view.
     - Select an excursion to view its details, where you can also edit or delete the information.
 
-### 9. Setting Alerts for Adeventures:
+### 9. Setting Alerts for Adventures:
     - While adding or editing an excursion, you can set an alert for the excursion date.
     - This alert will notify you about the excursion on the specified date.
 
