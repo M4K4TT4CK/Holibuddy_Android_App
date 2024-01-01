@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Vacation App</string>
+    <string name="app_name">Holibuddy App</string>
+    <string name="portraitText">Portrait</string>
+    <string name="landscapeText">Landscape</string>
 </resources>
