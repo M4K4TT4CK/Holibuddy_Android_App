@@ -10,9 +10,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="Vacation Builder"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/baseline_beach_access_24"
+        android:label="HoliBuddy"
+        android:roundIcon="@drawable/baseline_beach_access_24"
         android:supportsRtl="true"
         android:theme="@style/Theme.VacationApp"
         tools:targetApi="31">

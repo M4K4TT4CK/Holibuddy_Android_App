@@ -1,6 +1,7 @@
 package com.mikem.vacationapp.UI;
 
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -10,6 +11,9 @@ import android.view.Menu;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+
 import com.mikem.vacationapp.R;
 
 import java.util.Objects;
@@ -28,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide(); // hide action bar
         setContentView(R.layout.activity_main);
         Button button = findViewById(R.id.button);
+        //animation for textview
+        TextView holiText = findViewById(R.id.textView);
+        ObjectAnimator animator = ObjectAnimator.ofFloat(holiText, "rotation", 0, 360);
+        animator.setDuration(500);
+        animator.start();
         button.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, VacationList.class);
             startActivity(intent);
