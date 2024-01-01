@@ -24,7 +24,7 @@ any traveler seeking an efficient and streamlined way to plan and enjoy their va
 Remember, Holibuddy is your friendly vacation builder application.
 
 ## TASK C - USER APPLICATION INSTRUCTIONS
-The HoliBuddy App is designed to be user-friendly and intuitive. Here are the instructions on how to
+The HoliBuddy App is designed to be user-friendly, intuitive, and useful. Here are the instructions on how to
 operate the application to utilize all its features effectively:
 
 ### 1. Home Screen:
