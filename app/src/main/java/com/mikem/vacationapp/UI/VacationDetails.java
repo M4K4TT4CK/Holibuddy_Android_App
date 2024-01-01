@@ -1,5 +1,6 @@
 package com.mikem.vacationapp.UI;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,9 +13,13 @@ import android.app.PendingIntent;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -64,6 +69,7 @@ import java.util.Objects;
         DatePickerDialog.OnDateSetListener startDate;
         DatePickerDialog.OnDateSetListener endDate;
 
+        private WebView webView;
 
 
         @Override
@@ -85,6 +91,7 @@ import java.util.Objects;
             lodging = getIntent().getStringExtra("vacationLodging");
             start_date = getIntent().getStringExtra("vacationStartDate");
             end_date = getIntent().getStringExtra("vacationEndDate");
+
 
             if (title != null) {
                 vacationId = getIntent().getIntExtra("vacationId", -1);
@@ -154,6 +161,25 @@ import java.util.Objects;
                 startActivity(intent);
             });
 
+            // Initialize WebView and load a URL
+            webView = findViewById(R.id.webview);
+            webView.setWebViewClient(new WebViewClient()); // Handles navigation within the WebView
+
+            OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
+                @Override
+                public void handleOnBackPressed() {
+                    if (webView.getVisibility() == View.VISIBLE && webView.canGoBack()) {
+                        webView.goBack();
+                    } else if (webView.getVisibility() == View.VISIBLE) {
+                        webView.setVisibility(View.GONE);
+                    } else {
+                        setEnabled(false); // Disable this onBackPressedCallback
+                        onBackPressed(); // Call the default back pressed behavior
+                    }
+                }
+            };
+
+            getOnBackPressedDispatcher().addCallback(this, callback);
 
             startDate = (view, year, monthOfYear, dayOfMonth) -> {
 
@@ -405,11 +431,25 @@ import java.util.Objects;
 
         // google search
         private void performGoogleSearch(String title) {
-            String query = "Fun things to do in " + title;
-            Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
-            intent.putExtra(SearchManager.QUERY, query);
-            startActivity(intent);
+            String query = "https://www.google.com/search?q=Fun+things+to+do+in+" + Uri.encode(title);
+            webView.loadUrl(query);
+            webView.setVisibility(View.VISIBLE); // Make the WebView visible
         }
+
+        @Override
+        public void onBackPressed() {
+            // Check if the WebView is visible and can go back
+            if (webView.getVisibility() == View.VISIBLE && webView.canGoBack()) {
+                webView.goBack(); // Navigate back in WebView history
+            } else if (webView.getVisibility() == View.VISIBLE) {
+                // WebView is visible but can't go back, so hide it and show the VacationDetails content
+                webView.setVisibility(View.GONE);
+            } else {
+                // Normal back action if WebView is not involved
+                super.onBackPressed(); // This will not exit the activity but just reverse the last action within the same activity
+            }
+        }
+
 
         @Override
         protected void onResume() {
