@@ -189,3 +189,9 @@ URL
 
 # Author
 >Mike McMillin
+
+## TODO
+    - Add google maps API to app for directions on start date
+
+## KNOWN ISSUES
+    - NONE CURRENTLY
