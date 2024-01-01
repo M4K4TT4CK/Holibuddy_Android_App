@@ -58,6 +58,7 @@ operate the application to utilize all its features effectively:
     - In the detailed view of a vacation, use the sharing feature to share details via email, 
       clipboard, or SMS.
     - The sharing feature automatically populates with the vacation details for easy sharing.
+
 ### 7. Generating Report:
     - Use the 'Generate report to excell...' in the menu to export to excel
     - After selection, appplicaiton will bring you to you android documents
@@ -73,7 +74,7 @@ operate the application to utilize all its features effectively:
 ### 8. Viewing and Editing Adventures:
     - Access the list of excursions from a vacation's detailed view.
     - Select an excursion to view its details, where you can also edit or delete the information.
-    - Use 'Google Search Adventures to get ideas for additional adventures.
+    - Use Google Search Adventures to get ideas for additional adventures.
 
 ### 9. Setting Alerts for Adventures:
     - While adding or editing an excursion, you can set an alert for the excursion date.
