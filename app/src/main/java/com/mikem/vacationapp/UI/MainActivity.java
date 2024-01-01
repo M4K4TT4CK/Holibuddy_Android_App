@@ -1,6 +1,8 @@
 package com.mikem.vacationapp.UI;
 
 
+import android.animation.Animator;
+import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,17 +28,31 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         //No title bar
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Objects.requireNonNull(getSupportActionBar()).hide(); // hide action bar
         setContentView(R.layout.activity_main);
         Button button = findViewById(R.id.button);
+
         //animation for textview
         TextView holiText = findViewById(R.id.textView);
-        ObjectAnimator animator = ObjectAnimator.ofFloat(holiText, "rotation", 0, 360);
-        animator.setDuration(500);
-        animator.start();
+        ObjectAnimator floatText = ObjectAnimator.ofFloat(holiText, "rotation", 0, 360);
+        floatText.setDuration(500);
+        floatText.setRepeatMode(ObjectAnimator.REVERSE);
+
+        //animate enter button
+        ObjectAnimator wiggleButton = ObjectAnimator.ofFloat(button, "alpha", 0.0f, 1);
+        wiggleButton.setDuration(500);
+
+        //animator set
+        AnimatorSet animSet = new AnimatorSet();
+        animSet.play(floatText);
+        animSet.play(wiggleButton).after(floatText);
+        animSet.start();
+
+        // button listener
         button.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, VacationList.class);
             startActivity(intent);
