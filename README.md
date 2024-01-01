@@ -90,6 +90,7 @@ operate the application to utilize all its features effectively:
 
 Remember to regularly update the application and check for new features or enhancements. 
 The app is compatible with Android 8.0 and higher, ensuring a wide range of device compatibility.
+Additionally, the application runs in both portrait and landscape mode for scalability.
 
 ## Setup for Maintenance Instructions (TASK C)
 
