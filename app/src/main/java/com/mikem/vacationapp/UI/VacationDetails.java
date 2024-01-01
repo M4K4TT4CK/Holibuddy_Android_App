@@ -9,6 +9,7 @@ import android.animation.ObjectAnimator;
 import android.app.AlarmManager;
 import android.app.DatePickerDialog;
 import android.app.PendingIntent;
+import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -288,6 +289,12 @@ import java.util.Objects;
                 }
             }
 
+            if (id == R.id.action_google_search) {
+                performGoogleSearch(vacationTitleText.getText().toString());
+                return true;
+            }
+
+
             if (id == R.id.delete) {
                 for (Vacation vac : repository.getmAllVacations()) {
                     if (vac.getVacationID() == Integer.parseInt(String.valueOf(vacationId)))
@@ -394,6 +401,14 @@ import java.util.Objects;
                 return true;
             }
             return super.onOptionsItemSelected(item);
+        }
+
+        // google search
+        private void performGoogleSearch(String title) {
+            String query = "Fun things to do in " + title;
+            Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+            intent.putExtra(SearchManager.QUERY, query);
+            startActivity(intent);
         }
 
         @Override

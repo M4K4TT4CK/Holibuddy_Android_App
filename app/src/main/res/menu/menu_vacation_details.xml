@@ -5,6 +5,9 @@
         android:icon="@android:drawable/ic_menu_save"
         android:contentDescription="Save"
         />
+    <item
+        android:id="@+id/action_google_search"
+        android:title="Google Search Adventures" />
 
     <item android:id="@+id/delete"
         android:title="Delete"
