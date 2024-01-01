@@ -157,7 +157,7 @@ public class VacationList extends AppCompatActivity {
             }
         }
     }
-
+    // create excel report of vacations
 private void writeCsvToFile(Uri uri) {
     try (ParcelFileDescriptor pfd = getContentResolver().openFileDescriptor(uri, "w");
          FileOutputStream fileOutputStream = new FileOutputStream(pfd.getFileDescriptor())) {
