@@ -176,16 +176,17 @@ Additionally, the application runs in both portrait and landscape mode for scala
 ### 3. Update Release Notes:
     - Prepare release notes for the new version, detailing new features, bug fixes, and any other 
       relevant information.
+
 ## Version Number
-    - Use link to view current version number
-    - https://gitlab.com/wgu-gitlab-environment/student-repos/mmcm108/d424-software-engineering-capstone/-/blob/working_branch/build.gradle.kts
+Use link to view current version number
+>https://gitlab.com/wgu-gitlab-environment/student-repos/mmcm108/d424-software-engineering-capstone/-/blob/working_branch/build.gradle.kts
 
 ## SIGNED APK VERSION
-    - VERSION: 
-    - 31
+    - VERSION: 31
+
 ## URL TO REPOSITORY
-    - URL
-    - https://gitlab.com/wgu-gitlab-environment/student-repos/mmcm108/d424-software-engineering-capstone/-/tree/working_branch?ref_type=heads
+URL
+>https://gitlab.com/wgu-gitlab-environment/student-repos/mmcm108/d424-software-engineering-capstone/-/tree/working_branch?ref_type=heads
 
 # Author
 >Mike McMillin
