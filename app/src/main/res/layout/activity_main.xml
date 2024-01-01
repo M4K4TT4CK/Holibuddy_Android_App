@@ -27,11 +27,6 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:layout_marginBottom="52dp"
-=======
-        android:layout_marginBottom="24dp"
->>>>>>> test
         android:text="ENTER"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
