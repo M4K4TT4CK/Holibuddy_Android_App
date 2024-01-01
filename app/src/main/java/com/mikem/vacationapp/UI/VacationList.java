@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -44,6 +46,25 @@ public class VacationList extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setTitle("Current Vacations");
 
         FloatingActionButton fab = findViewById(R.id.floatingActionButton);
+
+        //animate fab for load in rotate
+        ObjectAnimator fabAni =  ObjectAnimator.ofFloat(fab, "rotation", 0, 360);
+        fabAni.setDuration(2500);
+        fabAni.setRepeatMode(ObjectAnimator.REVERSE);
+        fabAni.setRepeatCount(ObjectAnimator.INFINITE);
+
+        //anime fab for appear in
+        ObjectAnimator fabAppear =ObjectAnimator.ofFloat(fab, "alpha", 0.0f, 1);
+        fabAppear.setDuration(1000);
+
+        //animatorSet
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.play(fabAni);
+        animatorSet.play(fabAppear).with(fabAni);
+        animatorSet.start();;
+
+
+
         fab.setOnClickListener(v -> startActivity(new Intent(VacationList.this, VacationDetails.class)));
 
         mRepository = new Repository(getApplication());
