@@ -436,19 +436,32 @@ import java.util.Objects;
             webView.setVisibility(View.VISIBLE); // Make the WebView visible
         }
 
+//        @Override
+//        public void onBackPressed() {
+//            // Check if the WebView is visible and can go back
+//            if (webView.getVisibility() == View.VISIBLE && webView.canGoBack()) {
+//                webView.goBack(); // Navigate back in WebView history
+//            } else if (webView.getVisibility() == View.VISIBLE) {
+//                // WebView is visible but can't go back, so hide it and show the VacationDetails content
+//                webView.setVisibility(View.GONE);
+//            } else {
+//                // Normal back action if WebView is not involved
+//                super.onBackPressed(); // This will not exit the activity but just reverse the last action within the same activity
+//            }
+//        }
+
         @Override
         public void onBackPressed() {
-            // Check if the WebView is visible and can go back
-            if (webView.getVisibility() == View.VISIBLE && webView.canGoBack()) {
-                webView.goBack(); // Navigate back in WebView history
-            } else if (webView.getVisibility() == View.VISIBLE) {
-                // WebView is visible but can't go back, so hide it and show the VacationDetails content
-                webView.setVisibility(View.GONE);
+            // Check if the WebView is visible
+            if (webView.getVisibility() == View.VISIBLE) {
+                webView.setVisibility(View.GONE); // Hide the WebView
             } else {
-                // Normal back action if WebView is not involved
-                super.onBackPressed(); // This will not exit the activity but just reverse the last action within the same activity
+                super.onBackPressed(); // Normal back action (go back to the previous activity)
             }
         }
+
+
+
 
 
         @Override
