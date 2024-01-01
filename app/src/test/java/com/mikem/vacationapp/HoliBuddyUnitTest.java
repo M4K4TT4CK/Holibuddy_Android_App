@@ -13,6 +13,8 @@ import static org.junit.Assert.*;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
+
+// D.  Explain how the software product was tested, including the following:
 public class HoliBuddyUnitTest {
     // Final tests for HoliBuddy App
     DateValidator dateValidator = new DateValidator();
