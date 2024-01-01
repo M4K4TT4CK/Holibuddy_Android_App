@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         //animation for textview
         TextView holiText = findViewById(R.id.textView);
         ObjectAnimator floatText = ObjectAnimator.ofFloat(holiText, "rotation", 0, 360);
-        floatText.setDuration(1500);
+        floatText.setDuration(1250);
         floatText.setRepeatMode(ObjectAnimator.REVERSE);
 
         //animate enter button

@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.app.AlarmManager;
 import android.app.DatePickerDialog;
 import android.app.PendingIntent;
@@ -128,6 +130,23 @@ import java.util.Objects;
 
 
             FloatingActionButton fab = findViewById(R.id.enter_excursion_details);
+
+            //animate fab for load in rotate
+            ObjectAnimator fabAni =  ObjectAnimator.ofFloat(fab, "rotation", 0, 360);
+            fabAni.setDuration(2500);
+            fabAni.setRepeatMode(ObjectAnimator.REVERSE);
+            fabAni.setRepeatCount(ObjectAnimator.INFINITE);
+
+            //anime fab for appear in
+            ObjectAnimator fabAppear =ObjectAnimator.ofFloat(fab, "alpha", 0.0f, 1);
+            fabAppear.setDuration(1000);
+
+            //animatorSet
+            AnimatorSet animatorSet = new AnimatorSet();
+            animatorSet.play(fabAni);
+            animatorSet.play(fabAppear).with(fabAni);
+            animatorSet.start();
+
             fab.setOnClickListener(view -> {
                 Intent intent = new Intent(VacationDetails.this, ExcursionDetails.class);
                 intent.putExtra("vacationId", vacationId);
