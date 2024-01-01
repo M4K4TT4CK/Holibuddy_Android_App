@@ -21,6 +21,8 @@ keep family and friends informed. By offering a blend of organizational tools, r
 and sharing options, the vacation scheduler app stands out as an indispensable tool for 
 any traveler seeking an efficient and streamlined way to plan and enjoy their vacations.
 
+Remember, Holibuddy is your friendly vacation builder application.
+
 ## TASK C - USER APPLICATION INSTRUCTIONS
 The HoliBuddy App is designed to be user-friendly and intuitive. Here are the instructions on how to
 operate the application to utilize all its features effectively:
