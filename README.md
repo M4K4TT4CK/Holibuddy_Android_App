@@ -76,7 +76,7 @@ operate the application to utilize all its features effectively:
 ### 8. Viewing and Editing Adventures:
     - Access the list of excursions from a vacation's detailed view.
     - Select an excursion to view its details, where you can also edit or delete the information.
-    - Use Google Search Adventures to get ideas for additional adventures.
+    - Use Google Search Adventures to get ideas for additional adventures. Opens within application.
 
 ### 9. Setting Alerts for Adventures:
     - While adding or editing an excursion, you can set an alert for the excursion date.
