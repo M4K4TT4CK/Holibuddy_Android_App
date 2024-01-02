@@ -68,13 +68,14 @@ public class ExcursionAdapter extends RecyclerView.Adapter<ExcursionAdapter.Excu
     @Override
     public void onBindViewHolder(@NonNull ExcursionAdapter.ExcursionViewHolder holder,int position) {
 
-        if(mExcursion != null) {
+        if (mExcursion != null) {
             Excursion current = mExcursion.get(position);
-            String title =  current.getExcursionTitle() + " - " + current.getExcursionDate();
+            String title = current.getExcursionTitle() + " - " + current.getExcursionDate();
             holder.excursionListItem.setText(title);
-        }else{
+        } else {
             holder.excursionListItem.setText("No Title");
         }
+    }
 
 
     public void setVacationTitle(List<Excursion> title) {
