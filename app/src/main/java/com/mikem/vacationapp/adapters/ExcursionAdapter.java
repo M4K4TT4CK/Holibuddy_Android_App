@@ -70,12 +70,12 @@ public class ExcursionAdapter extends RecyclerView.Adapter<ExcursionAdapter.Excu
 
         if(mExcursion != null) {
             Excursion current = mExcursion.get(position);
-            String title =  current.getExcursionTitle();
+            String title =  current.getExcursionTitle() + " - " + current.getExcursionDate();
             holder.excursionListItem.setText(title);
         }else{
             holder.excursionListItem.setText("No Title");
         }
-    }
+
 
     public void setVacationTitle(List<Excursion> title) {
         mExcursion = title;
