@@ -55,7 +55,7 @@ public class VacationAdapter extends RecyclerView.Adapter<VacationAdapter.Vacati
     public void onBindViewHolder(@NonNull VacationViewHolder holder, int position) {
         if (mVacations != null) {
             Vacation current = mVacations.get(position);
-            holder.vacationItemView.setText(current.getVacationTitle());
+            holder.vacationItemView.setText(current.getVacationTitle() + " - " + current.getVacationStartDate() + " - " + current.getVacationEndDate());
         } else {
             holder.vacationItemView.setText("No Vacation Title");
         }
