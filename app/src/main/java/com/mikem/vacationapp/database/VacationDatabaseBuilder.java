@@ -11,7 +11,7 @@ import com.mikem.vacationapp.dao.VacationDAO;
 import com.mikem.vacationapp.entities.Excursion;
 import com.mikem.vacationapp.entities.Vacation;
 
-@Database(entities = {Vacation.class, Excursion.class}, version = 5, exportSchema = false)
+@Database(entities = {Vacation.class, Excursion.class}, version = 6, exportSchema = false)
 public abstract class VacationDatabaseBuilder extends RoomDatabase {
     public abstract VacationDAO vacationDAO();
     public abstract ExcursionDAO excursionDAO();
