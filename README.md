@@ -188,7 +188,7 @@ Use link to view current version number
 
 ## URL TO REPOSITORY
 URL
->ADD HERE
+>https://github.com/M4K4TT4CK/Holibuddy_Android_App
 
 # Author
 >Mike McMillin
