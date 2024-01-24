@@ -23,7 +23,7 @@ any traveler seeking an efficient and streamlined way to plan and enjoy their va
 
 Remember, Holibuddy is your friendly vacation builder application.
 
-## TASK C - USER APPLICATION INSTRUCTIONS
+## USER APPLICATION INSTRUCTIONS
 The HoliBuddy App is designed to be user-friendly, intuitive, and useful. Here are the instructions on how to
 operate the application to utilize all its features effectively:
 
@@ -96,7 +96,7 @@ Remember to regularly update the application and check for new features or enhan
 The app is compatible with Android 8.0 and higher, ensuring a wide range of device compatibility.
 Additionally, the application runs in both portrait and landscape mode for scalability.
 
-## Setup for Maintenance Instructions (TASK C)
+## Setup for Maintenance Instructions
 
 ## Setting Up the Development Environment:
 
@@ -181,14 +181,14 @@ Additionally, the application runs in both portrait and landscape mode for scala
 
 ## Version Number
 Use link to view current version number
->https://gitlab.com/wgu-gitlab-environment/student-repos/mmcm108/d424-software-engineering-capstone/-/blob/working_branch/build.gradle.kts
+>ADD HERE
 
 ## SIGNED APK VERSION
     - VERSION: 31
 
 ## URL TO REPOSITORY
 URL
->https://gitlab.com/wgu-gitlab-environment/student-repos/mmcm108/d424-software-engineering-capstone/-/tree/working_branch?ref_type=heads
+>ADD HERE
 
 # Author
 >Mike McMillin
